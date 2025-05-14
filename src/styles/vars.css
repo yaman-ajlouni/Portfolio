@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+:root {
+  /* Gradient background colors */
+  --background-primary: linear-gradient(to bottom, #131313 0%, #1a1a1a 100%);
+  --background-secondary: linear-gradient(to bottom, #1a1a1a 0%, #131313 100%);
+
+  /* Text and accent colors remain the same */
+  --text-primary: #f8f8f8;
+  --text-secondary: #b3b3b3;
+  --accent-gold: #c9a96e;
+  --accent-gold-hover: #d6b982;
+  --accent-gold-soft: rgba(201, 169, 110, 0.12);
+  --accent-gold-muted: rgba(201, 169, 110, 0.05);
+  --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  --font-primary: 'Montserrat', sans-serif;
+  --font-display: 'Cormorant Garamond', serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  background: #131313;
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+/* Section styles for alternating backgrounds */
+.section-primary {
+  position: relative;
+  background: var(--background-primary);
+  overflow: hidden;
+}
+
+.section-secondary {
+  position: relative;
+  background: var(--background-secondary);
+  overflow: hidden;
+}
+
+/* Section dividers */
+.section-divider {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, var(--accent-gold-muted) 50%, transparent);
+  opacity: 0.5;
+}
+
+/* Common animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Section title styles */
+.section-title {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-gold) 0%, rgba(201, 169, 110, 0.3) 100%);
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}

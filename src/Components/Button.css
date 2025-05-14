@@ -1,0 +1,73 @@
+/* Button.css - Back to top button styling with gold theme */
+@import url('../styles/vars.css');
+
+.btn-all-page {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    font-size: 18px;
+    border-radius: 50%;
+    background-color: #1a1a1a;
+    color: var(--accent-gold);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    border: 2px solid var(--accent-gold);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: var(--transition);
+    animation: fadeInButton 0.5s ease-out;
+}
+
+.pi-arrow-up {
+    color: var(--accent-gold);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.btn-all-page:hover {
+    background-color: var(--accent-gold);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(201, 169, 110, 0.3);
+    cursor: pointer;
+}
+
+.btn-all-page:hover .pi-arrow-up {
+    color: #131313;
+}
+
+@keyframes fadeInButton {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .btn-all-page {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-all-page {
+        bottom: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+}

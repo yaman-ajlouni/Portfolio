@@ -1,0 +1,233 @@
+/* LeftAbout.css - Refined elegant design */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+.left-container-about {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-info {
+  display: flex;
+  flex: 1;
+  margin-bottom: 40px;
+}
+
+.left-info-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.left-info-img {
+  width: 200px;
+  height: 240px;
+  border-radius: 4px;
+  object-fit: cover;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  transition: all 0.4s ease;
+  filter: grayscale(0.2) contrast(1.1);
+}
+
+.left-info-img:hover {
+  transform: scale(1.02);
+  filter: grayscale(0) contrast(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  border-color: var(--accent-gold);
+}
+
+.left-info-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 30px;
+  padding: 10px 0;
+}
+
+.info-item {
+  margin-bottom: 15px;
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+}
+
+.info-label {
+  font-weight: 600;
+  color: var(--accent-gold);
+  min-width: 80px;
+  position: relative;
+}
+
+.info-label::after {
+  content: ':';
+  position: absolute;
+  right: 5px;
+}
+
+.info-value {
+  color: var(--text-primary);
+  font-weight: 400;
+}
+
+/* Skills section */
+.left-skills {
+  margin-top: 20px;
+}
+
+.left-skills > h3 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 25px;
+  position: relative;
+  display: inline-block;
+}
+
+.left-skills > h3::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-gold) 0%, rgba(212, 175, 55, 0.3) 100%);
+  bottom: -8px;
+  left: 0;
+}
+
+.left-skills-container {
+  padding-right: 15px;
+}
+
+.skill-item {
+  margin-bottom: 25px;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.skill-name {
+  font-family: var(--font-primary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.skill-percentage {
+  font-family: var(--font-primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-gold);
+}
+
+.skill-bar {
+  height: 6px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-progress {
+  height: 100%;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--accent-gold) 0%, var(--accent-gold-hover) 100%);
+  position: relative;
+  transition: width 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.skill-progress::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 0 3px 3px 0;
+}
+
+/* Skill bars with different widths */
+.skill-html .skill-progress { width: 85%; }
+.skill-css .skill-progress { width: 80%; }
+.skill-js .skill-progress { width: 80%; }
+.skill-react .skill-progress { width: 90%; }
+
+/* Responsive Styles */
+@media (max-width: 1250px) {
+  .left-info-img {
+    width: 180px;
+    height: 220px;
+  }
+  
+  .left-info-details {
+    margin-left: 20px;
+  }
+  
+  .info-item {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .left-info {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .left-info-img {
+    width: 160px;
+    height: 200px;
+  }
+  
+  .left-skills > h3 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .left-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .left-info-details {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .info-item {
+    justify-content: space-between;
+  }
+  
+  .info-label {
+    min-width: auto;
+  }
+}
+
+@media (max-width: 370px) {
+  .left-container-about {
+    align-items: center;
+  }
+  
+  .left-info-img {
+    width: 140px;
+    height: 180px;
+  }
+  
+  .skill-info {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .left-skills {
+    width: 100%;
+  }
+}

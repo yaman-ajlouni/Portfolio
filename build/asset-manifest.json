@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.54b74194.css",
+    "main.js": "/static/js/main.1b8c2e58.js",
+    "static/media/yaman.png": "/static/media/yaman.86dffc7ea2cdd7cfa321.png",
+    "static/media/primeicons.svg": "/static/media/primeicons.6ed59f962963a4a73af2.svg",
+    "static/media/Inter-italic.var.woff2?v=3.19": "/static/media/Inter-italic.var.30807be7abc48ba8c73c.woff2",
+    "static/media/Inter-roman.var.woff2?v=3.19": "/static/media/Inter-roman.var.ba4caefcdf5b36b438db.woff2",
+    "static/media/AlAseel.png": "/static/media/AlAseel.8b2d900ae053b0c088e5.png",
+    "static/media/dark-tress.jpg": "/static/media/dark-tress.0c1cc2c8f5967cb248d6.jpg",
+    "static/media/Yaman.jpg": "/static/media/Yaman.41d36c7fd070343e0365.jpg",
+    "static/media/mirruba.png": "/static/media/mirruba.c2e7b4abdf71f67025c3.png",
+    "static/media/portfolioMain.png": "/static/media/portfolioMain.bb21329db2f7d876068f.png",
+    "static/media/primeicons.eot": "/static/media/primeicons.ff0c4cd79b2ffca2de54.eot",
+    "static/media/primeicons.woff": "/static/media/primeicons.8931fda1930c3bd21e96.woff",
+    "static/media/primeicons.ttf": "/static/media/primeicons.a5c2a53d1ff7a9ff5933.ttf",
+    "static/media/Yaman-Ajlouni-full-logo-white.png": "/static/media/Yaman-Ajlouni-full-logo-white.c3ff3d00ae26f6791e4c.png",
+    "static/media/Yaman-Ajlouni-logo-white.png": "/static/media/Yaman-Ajlouni-logo-white.00f9353f490ef3064e40.png",
+    "static/media/primeicons.woff2": "/static/media/primeicons.024b32cc7bf399b1a847.woff2",
+    "index.html": "/index.html",
+    "main.54b74194.css.map": "/static/css/main.54b74194.css.map",
+    "main.1b8c2e58.js.map": "/static/js/main.1b8c2e58.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.54b74194.css",
+    "static/js/main.1b8c2e58.js"
+  ]
+}

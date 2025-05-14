@@ -1,0 +1,198 @@
+.portfolio-card-container {
+    width: 416px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 90px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.portfolio-card-container:hover {
+    transform: translateY(-5px);
+}
+
+.portfolio-card-container:hover .portfolio-image {
+    transform: scale(1.3);
+    transform-origin: center center;
+}
+
+.portfolio-image-container {
+    height: 260px;
+    width: 100%;
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    background-color: #1f1f1f;
+    /* Dark background instead of white */
+}
+
+.portfolio-image {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    transition: transform 0.7s ease;
+    background-color: #1f1f1f;
+    /* Dark background instead of white */
+}
+
+.portfolio-details {
+    position: relative;
+    flex: 1;
+    display: flex;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    background-color: #1d1d1d;
+    /* Dark background instead of white */
+    border-top: 1px solid rgba(201, 169, 110, 0.1);
+    /* Subtle gold separator */
+}
+
+.portfolio-details-left {
+    flex: 2;
+    padding: 0 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 14px;
+    gap: 5px;
+}
+
+.portfolio-details-left p {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: var(--text-primary);
+    /* Light text instead of black */
+}
+
+.portfolio-details-left span {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--accent-gold);
+    /* Gold instead of dodgerblue */
+}
+
+.portfolio-details-left div {
+    font-size: 12px;
+    color: rgba(201, 169, 110, 0.6);
+    /* Gold with opacity instead of blue */
+}
+
+.portfolio-details-right {
+    flex: 1;
+    padding: 0 12px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.portfolio-card-button {
+    height: 50px;
+    width: 50px;
+    color: var(--accent-gold);
+    /* Gold instead of dodgerblue */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    border: 2px solid var(--accent-gold);
+    /* Gold border instead of blue */
+    box-sizing: border-box;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.portfolio-card-button:hover {
+    background-color: var(--accent-gold);
+    color: #131313;
+    /* Dark background color when hovered */
+}
+
+.portfolio-card-button i,
+.portfolio-card-button svg {
+    max-height: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+.portfolio-card-button * {
+    margin: 0;
+    padding: 0;
+}
+
+.portfolio-image2 {
+    cursor: pointer;
+    transition: 0.3s;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    /* Add a subtle dark filter to images */
+    filter: brightness(0.9);
+}
+
+.portfolio-image2:hover {
+    filter: brightness(1);
+    /* Return to normal brightness on hover */
+}
+
+@media (max-width: 800px) {
+    .portfolio-card-container {
+        overflow: hidden;
+        width: 90%;
+        /* More responsive width */
+        max-width: 416px;
+    }
+
+    .portfolio-image-container {
+        position: relative;
+        width: 100%;
+        height: 220px;
+        /* Slightly smaller on mobile */
+    }
+
+    .portfolio-image2 {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+        object-position: center;
+    }
+
+    .portfolio-details-left p {
+        text-align: start;
+    }
+
+    .portfolio-details-left span {
+        text-align: start;
+    }
+
+    .portfolio-details-left div {
+        text-align: start;
+    }
+
+    .portfolio-card-container:hover .portfolio-image {
+        transform: scale(1);
+        transform-origin: center center;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-card-container {
+        margin-bottom: 40px;
+    }
+
+    .portfolio-details-left p {
+        font-size: 18px;
+    }
+
+    .portfolio-card-button {
+        height: 40px;
+        width: 40px;
+        font-size: 20px;
+    }
+}

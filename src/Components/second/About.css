@@ -1,0 +1,135 @@
+/* about.css - Secondary background (second section) */
+/* Import global styles */
+@import url('../../styles/vars.css');
+
+.About-out-container {
+  margin: 0;
+  background-color: var(--background-secondary); /* Second section - secondary color */
+  padding: 120px 5% 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Section divider at top */
+.About-out-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-gold-muted) 50%, transparent);
+  opacity: 0.5;
+  z-index: 1;
+}
+
+/* Background accents */
+
+.About-container {
+  display: flex;
+  background-color: rgba(20, 20, 20, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(201, 169, 110, 0.1);
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  padding: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  animation: fadeIn 1s ease-out;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-gold) 0%, rgba(201, 169, 110, 0.3) 100%);
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.left-about {
+  flex: 1;
+  font-size: 20px;
+  border-right: 1px solid rgba(201, 169, 110, 0.1);
+  padding-right: 40px;
+}
+
+.right-about {
+  flex: 1;
+  padding-left: 40px;
+}
+
+@media (max-width: 1200px) {
+  .About-container {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .About-out-container {
+    padding: 100px 5% 80px;
+  }
+  
+  .About-container {
+    margin: 0 auto;
+    flex-direction: column;
+    padding: 40px;
+    gap: 60px;
+  }
+  
+  .left-about {
+    border-right: none;
+    border-bottom: 1px solid rgba(201, 169, 110, 0.1);
+    padding-right: 0;
+    padding-bottom: 40px;
+  }
+  
+  .right-about {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .About-out-container {
+    padding: 80px 20px 60px;
+  }
+  
+  .About-container {
+    padding: 30px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .About-out-container {
+    padding: 70px 15px 50px;
+  }
+  
+  .About-container {
+    padding: 25px 20px;
+    gap: 40px;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+}

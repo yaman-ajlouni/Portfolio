@@ -1,0 +1,193 @@
+/* ServicesCards.css - Fixed card-logo for consistent appearance */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+.services-cards-container {
+  padding: 10px;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  /* Add display flex and center to ensure consistent sizing */
+  display: flex;
+  justify-content: center;
+}
+
+.services-cards-container:hover {
+  transform: translateY(-8px);
+}
+
+.cards-container {
+  height: 330px;
+  width: 330px;
+  background-color: rgba(20, 20, 20, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  border-radius: 6px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 25px;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.cards-container:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+/* Fixed Icon container */
+.card-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 0 1px var(--accent-gold);
+  border-radius: 50%;
+  margin: 0 auto 30px; /* Center horizontally with auto margins */
+  width: 90px;
+  height: 90px;
+  min-width: 90px; /* Ensure minimum width */
+  min-height: 90px; /* Ensure minimum height */
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+  overflow: hidden;
+  /* Fix aspect ratio to ensure circle remains circular */
+  aspect-ratio: 1/1;
+}
+
+.card-logo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--accent-gold) 0%, rgba(212, 175, 55, 0.7) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+}
+
+.card-logo .pi {
+  font-size: 36px;
+  color: var(--accent-gold);
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 2;
+  /* Center the icon properly */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.cards-container:hover .card-logo {
+  box-shadow: 0 0 0 2px var(--accent-gold);
+  transform: scale(1.05);
+}
+
+.cards-container:hover .card-logo::before {
+  opacity: 1;
+}
+
+.cards-container:hover .card-logo .pi {
+  color: var(--background-color);
+}
+
+/* Title */
+.card-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 20px;
+  position: relative;
+  padding-bottom: 15px;
+  text-align: center; /* Ensure centered text */
+}
+
+.card-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--accent-gold) 0%, rgba(212, 175, 55, 0.3) 100%);
+}
+
+/* Description */
+.card-details {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  text-align: center; /* Center text */
+}
+
+.card-details p {
+  font-family: var(--font-primary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Service card animations */
+@keyframes cardAppear {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.services-cards-container {
+  opacity: 0;
+  animation: cardAppear 0.8s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+.services-cards-container:nth-child(1) { animation-delay: 0.1s; }
+.services-cards-container:nth-child(2) { animation-delay: 0.2s; }
+.services-cards-container:nth-child(3) { animation-delay: 0.3s; }
+.services-cards-container:nth-child(4) { animation-delay: 0.4s; }
+
+/* Responsive styles */
+@media (max-width: 500px) {
+  .services-cards-container {
+    width: 100%;
+  }
+
+  .cards-container {
+    width: 100%;
+    max-width: 330px;
+    height: auto;
+    min-height: 330px;
+    padding: 25px 20px;
+  }
+  
+  .card-logo {
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+    min-height: 80px;
+    margin-bottom: 25px;
+  }
+  
+  .card-logo .pi {
+    font-size: 32px;
+  }
+  
+  .card-title {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+  }
+  
+  .card-details p {
+    font-size: 0.9rem;
+  }
+}

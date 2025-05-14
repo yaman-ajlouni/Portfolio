@@ -1,0 +1,155 @@
+/* fifth.css - Portfolio section with dark theme */
+/* Import global styles */
+@import url('../../styles/vars.css');
+
+.portfolio-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #131313, #1a1a1a);
+    /* Match your dark theme gradients */
+    padding: 100px 5%;
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-card-container2 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 30px 50px 20px;
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 1s ease-out;
+}
+
+.portfolio-topic {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: var(--font-display);
+    /* Use the theme font */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.portfolio-topic h2 {
+    font-size: 60px;
+    color: var(--text-primary);
+}
+
+.portfolio-topic p {
+    margin-top: 5px;
+    font-size: 17px;
+    font-weight: 300;
+    color: var(--text-secondary);
+}
+
+.portfolio-line {
+    height: 3px;
+    width: 60px;
+    background: linear-gradient(90deg, var(--accent-gold) 0%, rgba(201, 169, 110, 0.3) 100%);
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+/* Update PortfolioCard styling */
+.portfolio-card-container {
+    width: 416px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 90px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.portfolio-card-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio-details {
+    position: relative;
+    flex: 1;
+    display: flex;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    background-color: #1f1f1f;
+    /* Slightly lighter than the main background */
+}
+
+.portfolio-details-left p {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: var(--text-primary);
+}
+
+.portfolio-details-left span {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--accent-gold);
+}
+
+.portfolio-details-left div {
+    font-size: 12px;
+    color: rgba(201, 169, 110, 0.7);
+}
+
+.portfolio-card-button {
+    height: 50px;
+    width: 50px;
+    color: var(--accent-gold);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    border: 2px solid var(--accent-gold);
+    box-sizing: border-box;
+    transition: var(--transition);
+    background-color: transparent;
+}
+
+.portfolio-card-button:hover {
+    background-color: var(--accent-gold);
+    color: #1f1f1f;
+}
+
+@media (max-width: 800px) {
+    .portfolio-card-container2 {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .portfolio-container {
+        padding: 60px 20px;
+    }
+
+    .portfolio-topic p {
+        font-size: 15px;
+        margin-top: 20px;
+    }
+
+    .portfolio-topic h2 {
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-container {
+        padding: 50px 15px;
+    }
+
+    .portfolio-card-container {
+        margin-bottom: 50px;
+    }
+}

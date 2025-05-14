@@ -1,0 +1,313 @@
+/* NavBar.css - Refined elegant design */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+:root {
+  --background-color: #0f0f0f;
+  --background-light: #121212;
+  --text-primary: #f8f8f8;
+  --text-secondary: #b3b3b3;
+  --accent-gold: #d4af37;
+  --accent-gold-hover: #e8c64d;
+  --accent-gold-soft: rgba(212, 175, 55, 0.12);
+  --accent-gold-muted: rgba(212, 175, 55, 0.05);
+  --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  --font-primary: 'Montserrat', sans-serif;
+  --font-display: 'Cormorant Garamond', serif;
+}
+
+.nav {
+  background-color: var(--background-color);
+  display: flex;
+  align-items: center;
+  font-family: var(--font-primary);
+  padding: 20px 5%;
+  position: fixed;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.05);
+  transition: all 0.4s ease;
+}
+
+/* Shrink navbar on scroll with elegant blur effect */
+.nav.scrolled {
+  padding: 15px 5%;
+  background-color: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.nav-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Left side with logo */
+.left-nav {
+  display: flex;
+  align-items: center;
+}
+
+.left-nav-item {
+  display: flex;
+  align-items: center;
+  transition: var(--transition);
+}
+
+.left-nav-item:hover {
+  opacity: 0.9;
+}
+
+.left-nav-item-image-desktop {
+  width: 180px;
+  height: auto;
+  transition: var(--transition);
+}
+
+.left-nav-item-image-mobile {
+  display: none;
+  width: 60px;
+  height: auto;
+  transition: var(--transition);
+}
+
+/* Right side navigation */
+.right-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar-details-container {
+  display: flex;
+  gap: 2.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  gap: 2.5rem;
+}
+
+li {
+  padding: 0;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+a:visited {
+  color: var(--text-secondary);
+}
+
+a:hover {
+  color: var(--accent-gold);
+}
+
+.nav-Links {
+  position: relative;
+  padding: 6px 0;
+}
+
+/* Elegant underline animation */
+.nav-Links::after {
+  content: "";
+  height: 1px;
+  width: 0;
+  background: var(--accent-gold);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: width 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.nav-Links:hover::after,
+.nav-Links:focus::after {
+  width: 100%;
+}
+
+/* Refined hamburger menu */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  width: 30px;
+  height: 20px;
+  position: relative;
+  z-index: 102;
+}
+
+.menu-toggle span {
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: var(--text-primary);
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.3s ease-in-out;
+}
+
+.menu-toggle span:nth-child(1) {
+  top: 0px;
+}
+
+.menu-toggle span:nth-child(2) {
+  top: 9px;
+  width: 70%;
+  right: 0;
+  left: auto;
+}
+
+.menu-toggle span:nth-child(3) {
+  top: 18px;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  top: 9px;
+  transform: rotate(135deg);
+  background: var(--accent-gold);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+  width: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  top: 9px;
+  transform: rotate(-135deg);
+  background: var(--accent-gold);
+}
+
+/* Mobile Menu Styles with refined animation */
+@media (max-width: 1000px) {
+  .nav {
+    padding: 15px 5%;
+  }
+  
+  .right-button-navbar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar-details-container {
+    visibility: hidden;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    right: -100%;
+    top: 0;
+    background: linear-gradient(to bottom, rgba(10, 10, 10, 0.98), rgba(15, 15, 15, 0.98));
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    transition: right 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+  }
+
+  .navbar-details-container.active {
+    visibility: visible;
+    right: 0;
+  }
+
+  .navbar-details-container a {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  
+  .navbar-details-container.active a {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  /* Staggered animation for menu items */
+  .navbar-details-container.active li:nth-child(1) a { transition-delay: 0.1s; }
+  .navbar-details-container.active li:nth-child(2) a { transition-delay: 0.2s; }
+  .navbar-details-container.active li:nth-child(3) a { transition-delay: 0.3s; }
+  .navbar-details-container.active li:nth-child(4) a { transition-delay: 0.4s; }
+  .navbar-details-container.active li:nth-child(5) a { transition-delay: 0.5s; }
+
+  .navbar-details-container li {
+    position: relative;
+  }
+
+  .navbar-details-container li::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -5px;
+    left: 50%;
+    background-color: var(--accent-gold-muted);
+    transform: translateX(-50%);
+    transition: width 0.4s ease;
+  }
+
+  .navbar-details-container.active li::after {
+    width: 20px;
+  }
+
+  a:visited {
+    color: var(--text-secondary);
+  }
+
+  a:hover {
+    color: var(--accent-gold);
+  }
+
+  li {
+    margin: 5px 0;
+  }
+
+  .left-nav-item-image-desktop {
+    display: none !important;
+  }
+
+  .left-nav-item-image-mobile {
+    display: block !important;
+    width: 60px;
+    height: auto;
+  }
+}
+
+/* Smaller mobile screens */
+@media (max-width: 480px) {
+  .nav {
+    padding: 12px 5%;
+  }
+  
+  .left-nav-item-image-mobile {
+    width: 50px !important;
+  }
+}
