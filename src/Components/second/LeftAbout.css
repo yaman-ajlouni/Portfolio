@@ -26,12 +26,10 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(212, 175, 55, 0.3);
   transition: all 0.4s ease;
-  filter: grayscale(0.2) contrast(1.1);
 }
 
 .left-info-img:hover {
   transform: scale(1.02);
-  filter: grayscale(0) contrast(1.05);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   border-color: var(--accent-gold);
 }

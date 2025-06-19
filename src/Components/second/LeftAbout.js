@@ -1,4 +1,3 @@
-import React from 'react';
 import './LeftAbout.css';
 
 export const LeftAbout = (props) => {
@@ -6,10 +5,10 @@ export const LeftAbout = (props) => {
         <div className='left-container-about'>
             <div className='left-info'>
                 <div className='left-info-img-container'>
-                    <img 
-                        className='left-info-img' 
-                        src={require('../assets/images/yaman.png')} 
-                        alt="Yaman Ajlouni" 
+                    <img
+                        className='left-info-img'
+                        src={require('../assets/images/yaman-old.jpg')}
+                        alt="Yaman Ajlouni"
                     />
                 </div>
                 <div className='left-info-details'>
@@ -31,7 +30,7 @@ export const LeftAbout = (props) => {
                     </div>
                 </div>
             </div>
-            
+
             <div className='left-skills'>
                 <h3>Skills</h3>
                 <div className='left-skills-container'>
@@ -44,17 +43,17 @@ export const LeftAbout = (props) => {
                             <div className="skill-progress" data-width="85%"></div>
                         </div>
                     </div>
-                    
+
                     <div className="skill-item skill-css">
                         <div className="skill-info">
                             <span className="skill-name">CSS</span>
-                            <span className="skill-percentage">80%</span>
+                            <span className="skill-percentage">85%</span>
                         </div>
                         <div className="skill-bar">
-                            <div className="skill-progress" data-width="80%"></div>
+                            <div className="skill-progress" data-width="85%"></div>
                         </div>
                     </div>
-                    
+
                     <div className="skill-item skill-js">
                         <div className="skill-info">
                             <span className="skill-name">JAVASCRIPT</span>
@@ -64,14 +63,14 @@ export const LeftAbout = (props) => {
                             <div className="skill-progress" data-width="80%"></div>
                         </div>
                     </div>
-                    
+
                     <div className="skill-item skill-react">
                         <div className="skill-info">
                             <span className="skill-name">React</span>
-                            <span className="skill-percentage">90%</span>
+                            <span className="skill-percentage">95%</span>
                         </div>
                         <div className="skill-bar">
-                            <div className="skill-progress" data-width="90%"></div>
+                            <div className="skill-progress" data-width="95%"></div>
                         </div>
                     </div>
                 </div>

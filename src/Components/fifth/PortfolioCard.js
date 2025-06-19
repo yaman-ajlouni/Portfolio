@@ -1,4 +1,3 @@
-import React from 'react'
 import './PortfolioCard.css'
 
 export const PortfolioCard = (props) => {
@@ -6,7 +5,7 @@ export const PortfolioCard = (props) => {
         <a className='portfolio-card-container' href={props.link} target="_blank" rel="noopener noreferrer">
             <div className='portfolio-image'>
                 <div className='portfolio-image-container'>
-                    <img className='portfolio-image2' src={props.image}  alt="image of project" />
+                    <img className='portfolio-image2' src={props.image} alt="project" />
                 </div>
             </div>
             <div className='portfolio-details'>

@@ -1,4 +1,3 @@
-import React from 'react'
 import './TwoPeople.css'
 
 export const TwoPeople = () => {
@@ -6,7 +5,7 @@ export const TwoPeople = () => {
         <div className='people-out-container'>
             <div className='people-container'>
                 <img 
-                    src={require('../assets/images/yaman.png')} 
+                    src={require('../assets/images/yaman-old.jpg')} 
                     style={{ width: 150, height: 150, borderRadius: 150 }} 
                     alt="Yaman Ajlouni" 
                 />

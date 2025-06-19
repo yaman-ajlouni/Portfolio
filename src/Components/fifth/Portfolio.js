@@ -6,6 +6,13 @@ export const Portfolio = () => {
     // Example data for the portfolio cards
     const portfolioData = [
         {
+            image: require('../assets/images/devignCreatives.png'),
+            title: "Devign Creatives",
+            category: "Web Development",
+            date: "15 Jun. 2025",
+            link: "https://devigncreatives.com/"
+        },
+        {
             image: require('../assets/images/mirruba.png'),
             title: "Mirruba Jewelry",
             category: "Web Development",
@@ -18,12 +25,13 @@ export const Portfolio = () => {
             category: "Web Development",
             date: "05 Sep. 2024",
             link: "https://alaseel-sweets.netlify.app/"
-        }, {
-            image: require('../assets/images/portfolioMain.png'),
-            title: "Yaman Ajlouni Portfolio",
+        },
+        {
+            image: require('../assets/images/syrianHotels.jpg'),
+            title: "Syrian Hotels",
             category: "Web Development",
-            date: "01 Apr. 2024",
-            link: "https://yaman-ajlouni-portfolio.netlify.app/"
+            date: "12 Apr. 2025",
+            link: "https://syrianhotels.netlify.app/"
         },
     ];
 
