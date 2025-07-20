@@ -20,7 +20,7 @@
     flex: 1;
     position: relative;
     overflow: hidden;
-    background-color: #1f1f1f;
+    background-color: transparent;
     /* Dark background instead of white */
 }
 
@@ -30,7 +30,6 @@
     width: 100%;
     overflow: hidden;
     transition: transform 0.7s ease;
-    background-color: #1f1f1f;
     /* Dark background instead of white */
 }
 
@@ -89,14 +88,12 @@
     height: 50px;
     width: 50px;
     color: var(--accent-gold);
-    /* Gold instead of dodgerblue */
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 25px;
     border: 2px solid var(--accent-gold);
-    /* Gold border instead of blue */
     box-sizing: border-box;
     background-color: transparent;
     transition: all 0.3s ease;
@@ -127,13 +124,11 @@
     height: 100%;
     width: 100%;
     object-fit: contain;
-    /* Add a subtle dark filter to images */
     filter: brightness(0.9);
 }
 
 .portfolio-image2:hover {
     filter: brightness(1);
-    /* Return to normal brightness on hover */
 }
 
 @media (max-width: 800px) {

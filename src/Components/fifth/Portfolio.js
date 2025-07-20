@@ -13,6 +13,20 @@ export const Portfolio = () => {
             link: "https://devigncreatives.com/"
         },
         {
+            image: require('../assets/images/shamsuperstore.jpg'),
+            title: "ShamSuperStore",
+            category: "Web Development , Mobile Development",
+            date: "28 Jul. 2025",
+            link: "https://shamsuperstore.com/"
+        },
+        {
+            image: require('../assets/images/trustmeds.png'),
+            title: "TrustMeds",
+            category: "Web Development",
+            date: "15 Jun. 2025",
+            link: "https://trustmeds-netlify.app/"
+        },
+        {
             image: require('../assets/images/mirruba.png'),
             title: "Mirruba Jewelry",
             category: "Web Development",

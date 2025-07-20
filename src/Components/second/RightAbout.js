@@ -5,7 +5,7 @@ export const RightAbout = () => {
     const handleDownload = async () => {
         try {
             // Create a blob URL for the PDF
-            const response = await fetch('/YamanCV.pdf');
+            const response = await fetch('/YamanAjlouniCV.pdf');
 
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
@@ -16,7 +16,7 @@ export const RightAbout = () => {
             // Create a temporary link element
             const link = document.createElement('a');
             link.href = window.URL.createObjectURL(blob);
-            link.download = 'YamanCV.pdf';
+            link.download = 'YamanAjlouniCV.pdf';
 
             // Append to the DOM, click it, and remove it
             document.body.appendChild(link);

@@ -44,19 +44,19 @@ export const Fourth = () => {
       <div className="fourth-content">
         <FourthDetail
           icon="pi-check"
-          counter="8"
+          counter="9"
           title="WORKS COMPLETED"
           startCounting={isVisible}
         />
         <FourthDetail
           icon="pi-book"
-          counter="2"
+          counter="3"
           title="YEARS OF EXPERIENCE"
           startCounting={isVisible}
         />
         <FourthDetail
           icon="pi-users"
-          counter="7"
+          counter="8"
           title="TOTAL CLIENTS"
           startCounting={isVisible}
         />

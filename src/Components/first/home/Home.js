@@ -75,9 +75,9 @@ export const Home = () => {
       <div className="social-bar">
         <a href="https://www.linkedin.com/in/yaman-ajlouni-876b17221/" target="_blank" rel="noopener noreferrer" className="social-link">LinkedIn</a>
         <span className="social-divider">•</span>
-        <a href="https://github.com/YamanAjlouni" target="_blank" rel="noopener noreferrer" className="social-link">GitHub</a>
+        <a href="https://github.com/yaman-ajlouni" target="_blank" rel="noopener noreferrer" className="social-link">GitHub</a>
         <span className="social-divider">•</span>
-        <a href="https://dribbble.com/YamanAjlouni" target="_blank" rel="noopener noreferrer" className="social-link">Dribbble</a>
+        <a href="https://dribbble.com/yaman-ajlouni" target="_blank" rel="noopener noreferrer" className="social-link">Dribbble</a>
       </div>
     </div>
   );

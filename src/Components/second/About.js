@@ -45,7 +45,7 @@ export const About = () => {
             name={"Yaman Ajlouni"} 
             profile={"Front-end Developer"} 
             email={"yamanajlouni1@hotmail.com"} 
-            phone={'0991951452'} 
+            phone={'+963 991 951 452'} 
           />
         </div>
         <div className='right-about'>
