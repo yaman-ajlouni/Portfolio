@@ -9,11 +9,32 @@ import { Portfolio } from './Components/fifth/Portfolio';
 import { TwoPeople } from './Components/six/TwoPeople';
 import { Last } from './Components/last/Last';
 import { Button } from './Components/Button';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
+
 
 
 function App() {
+  
   const toastRef = useRef()
+
+  useEffect(() => {
+    const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+    const updateFavicon = (e) => {
+      const favicon = document.getElementById('favicon');
+      if (favicon) {
+        favicon.href = e.matches ? '/favicon-dark.ico' : '/favicon-light.ico';
+      }
+    };
+
+    updateFavicon(darkModeMediaQuery); // التحقق عند أول تحميل
+    darkModeMediaQuery.addEventListener('change', updateFavicon); // الاستماع للتغيير
+
+    return () => {
+      darkModeMediaQuery.removeEventListener('change', updateFavicon); // تنظيف بعد الخروج
+    };
+  }, []);
+
   return (
     <>
       <BrowserRouter>
